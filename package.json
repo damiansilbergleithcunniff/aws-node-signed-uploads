@@ -9,7 +9,7 @@
     "deploy": "serverless deploy -v",
     "lint": "eslint .",
     "start": "serverless offline start",
-    "test": "jest"
+    "test": "jest -o --watch"
   },
   "devDependencies": {
     "aws-sdk": "2.223.1",

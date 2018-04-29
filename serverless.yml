@@ -8,7 +8,7 @@ custom:
   webpack:
     webpackConfig: 'webpack.config.js'
     includeModules: true
-    packager: 'yarn'
+    packager: 'npm'
   serverless-offline:
     port: 4000
 
@@ -19,8 +19,6 @@ provider:
   region: ${opt:region, file(config.json):region, 'eu-west-1'}
   environment:
     REGION: ${self:provider.region}
-    # Bucket to which signed uploads will be possible.
-    BUCKET: bananabucket-${self:provider.stage}
   versionFunctions: false
   iamRoleStatements:
   -  Effect: "Allow"
@@ -30,11 +28,11 @@ provider:
 
 functions:
   upsert-objects:
-    handler: src/upload.handler
+    handler: src/test-func/handler.hello
     name: ${self:provider.stage}-${self:service}-upload
     memorySize: 128
     events:
       - http:
-          path: upload
-          method: put
+          path: hello
+          method: get
           cors: true

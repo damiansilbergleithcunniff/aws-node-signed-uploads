@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hello world function default snapshot matches 1`] = `
+Object {
+  "body": "{\\"message\\":\\"Go Serverless v1.0! Your function executed successfully!\\",\\"input\\":\\"EVENT\\"}",
+  "statusCode": 200,
+}
+`;

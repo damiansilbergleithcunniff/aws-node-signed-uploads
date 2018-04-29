@@ -27,8 +27,8 @@ provider:
      Resource: "*"
 
 functions:
-  upsert-objects:
-    handler: src/test-func/handler.hello
+  test-func:
+    handler: src/test-func/handler.default
     name: ${self:provider.stage}-${self:service}-upload
     memorySize: 128
     events:

@@ -15,10 +15,11 @@ custom:
 provider:
   name: aws
   runtime: nodejs8.10
-  stage: ${opt:stage, file(./config/config.json):stage, 'dev'}
-  region: ${opt:region, file(./config/config.json):region, 'us-east-1'}
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, file(./config/config.${self:provider.stage}.json):region, 'us-east-1'}
   environment:
     REGION: ${self:provider.region}
+    SOMEVAL: ${file(./config/config.${self:provider.stage}.json):someval}
   versionFunctions: false
   iamRoleStatements:
   -  Effect: "Allow"

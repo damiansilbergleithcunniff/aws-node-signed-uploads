@@ -3,5 +3,4 @@ coverage
 .webpack
 node_modules
 *.log
-config.json
 .idea

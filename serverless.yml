@@ -1,4 +1,4 @@
-service: aws-node-singned-uploads
+service: serverless-framework-starter
 
 plugins:
   - serverless-webpack
@@ -15,8 +15,8 @@ custom:
 provider:
   name: aws
   runtime: nodejs8.10
-  stage: ${opt:stage, file(config.json):stage, 'dev'}
-  region: ${opt:region, file(config.json):region, 'eu-west-1'}
+  stage: ${opt:stage, file(./config/config.json):stage, 'dev'}
+  region: ${opt:region, file(./config/config.json):region, 'us-east-1'}
   environment:
     REGION: ${self:provider.region}
   versionFunctions: false

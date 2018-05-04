@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Config Files dev config to be correct 1`] = `
+Object {
+  "region": "us-east-1",
+  "someval": "hello nurse",
+  "stage": "dev",
+}
+`;
+
+exports[`Config Files prod config to be correct 1`] = `Object {}`;
+
+exports[`Config Files stage config to be correct 1`] = `Object {}`;
+
+exports[`Config Files test config to be correct 1`] = `
+Object {
+  "region": "us-east-1",
+  "someval": "hello test",
+  "stage": "dev",
+}
+`;

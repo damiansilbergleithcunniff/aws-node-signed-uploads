@@ -1,7 +1,8 @@
 import helloWorld from './helloWorld';
 
 const main = (event, context, callback) => {
-  const response = helloWorld(200, 'You should rework this component', event);
+  const message = process.env.SOMEVAL;
+  const response = helloWorld(200, message, event);
 
   callback(null, response);
 };

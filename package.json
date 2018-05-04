@@ -34,6 +34,7 @@
   "jest": {
     "coverageDirectory": "./coverage/",
     "testMatch": [
+      "<rootDir>/config/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
     ],
@@ -41,6 +42,7 @@
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "!**/*.config.{js,jsx}",
+      "!**/config/**",
       "!**/coverage/**",
       "!**/templates/**"
     ]

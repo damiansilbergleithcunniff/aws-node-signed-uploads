@@ -11,15 +11,16 @@ custom:
     packager: 'npm'
   serverless-offline:
     port: 4000
+  config-file: ${file(./config/config.${opt:stage, 'dev'}.json)}
 
 provider:
   name: aws
   runtime: nodejs8.10
-  stage: ${opt:stage, 'dev'}
-  region: ${opt:region, file(./config/config.${self:provider.stage}.json):region, 'us-east-1'}
+  stage: ${self:custom.config-file:stage, 'dev'}
+  region: ${opt:region, self:custom.config-file:region, 'us-east-1'}
   environment:
     REGION: ${self:provider.region}
-    SOMEVAL: ${file(./config/config.${self:provider.stage}.json):someval}
+    SOMEVAL: ${self:custom.config-file.someval}
   versionFunctions: false
   iamRoleStatements:
   -  Effect: "Allow"

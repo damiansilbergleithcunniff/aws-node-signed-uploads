@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`helloWorld handler generates expected response 1`] = `
+exports[`helloWorld handler generates expected response using SOMEVAL environment variable 1`] = `
 Object {
-  "body": "{\\"message\\":\\"You should rework this component\\",\\"input\\":\\"EVENT\\"}",
+  "body": "{\\"message\\":\\"SOME VALUE FROM ENV\\",\\"input\\":\\"EVENT\\"}",
   "statusCode": 200,
 }
 `;

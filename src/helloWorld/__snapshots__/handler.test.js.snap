@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`helloWorld handler generates expected response 1`] = `
+Object {
+  "body": "{\\"message\\":\\"You should rework this component\\",\\"input\\":\\"EVENT\\"}",
+  "statusCode": 200,
+}
+`;

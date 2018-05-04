@@ -28,8 +28,5 @@ provider:
      Resource: "*"
 
 functions:
-  test-func:
-    ${file(src/test-func/functions.yml)}
-  test-func1:
-    ${file(src/test-func/functions1.yml)}
-
+  helloWorld:
+    ${file(src/helloWorld/functions.yml)}

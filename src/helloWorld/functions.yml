@@ -1,0 +1,8 @@
+handler: src/helloWorld/handler.default
+name: ${self:provider.stage}-${self:service}-helloWorld
+memorySize: 128
+events:
+  - http:
+      path: helloWorld
+      method: get
+      cors: true

@@ -33,6 +33,19 @@
   },
   "jest": {
     "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/*.config.{js,jsx}",
+      "!**/coverage/**",
+      "!**/templates/**"
+    ]
+  },
+  "cca": {
+    "templatesDirPath": "templates/create-component-app"
   }
 }

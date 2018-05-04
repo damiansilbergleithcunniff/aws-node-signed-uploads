@@ -1,0 +1,8 @@
+handler: src/cOMPONENT_NAME/handler.default
+name: ${self:provider.stage}-${self:service}-cOMPONENT_NAME
+memorySize: 128
+events:
+  - http:
+      path: cOMPONENT_NAME
+      method: get
+      cors: true

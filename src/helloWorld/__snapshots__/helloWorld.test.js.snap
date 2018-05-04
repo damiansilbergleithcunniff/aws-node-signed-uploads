@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`helloWorld creates correct response 1`] = `
+Object {
+  "body": "{\\"message\\":\\"DUMMY MESSAGE\\",\\"input\\":\\"DUMMY EVENT\\"}",
+  "statusCode": "DUMMY STATUS",
+}
+`;

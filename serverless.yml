@@ -29,11 +29,7 @@ provider:
 
 functions:
   test-func:
-    handler: src/test-func/handler.default
-    name: ${self:provider.stage}-${self:service}-upload
-    memorySize: 128
-    events:
-      - http:
-          path: hello
-          method: get
-          cors: true
+    ${file(src/test-func/functions.yml)}
+  test-func1:
+    ${file(src/test-func/functions1.yml)}
+

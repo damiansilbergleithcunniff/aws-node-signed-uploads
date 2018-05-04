@@ -1,0 +1,8 @@
+handler: src/test-func/handler.default
+name: ${self:provider.stage}-${self:service}-upload
+memorySize: 128
+events:
+  - http:
+      path: world
+      method: get
+      cors: true

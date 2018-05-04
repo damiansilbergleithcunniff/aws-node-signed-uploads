@@ -1,1 +1,5 @@
-{}
+{
+  "someval": "hello stage",
+  "region": "us-east-1",
+  "stage": "stage"
+}

@@ -1,5 +1,5 @@
 {
   "someval": "hello test",
   "region": "us-east-1",
-  "stage": "dev"
+  "stage": "test"
 }

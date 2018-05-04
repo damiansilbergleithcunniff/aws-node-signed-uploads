@@ -8,14 +8,26 @@ Object {
 }
 `;
 
-exports[`Config Files prod config to be correct 1`] = `Object {}`;
+exports[`Config Files prod config to be correct 1`] = `
+Object {
+  "region": "us-east-1",
+  "someval": "hello prod",
+  "stage": "prod",
+}
+`;
 
-exports[`Config Files stage config to be correct 1`] = `Object {}`;
+exports[`Config Files stage config to be correct 1`] = `
+Object {
+  "region": "us-east-1",
+  "someval": "hello stage",
+  "stage": "stage",
+}
+`;
 
 exports[`Config Files test config to be correct 1`] = `
 Object {
   "region": "us-east-1",
   "someval": "hello test",
-  "stage": "dev",
+  "stage": "test",
 }
 `;

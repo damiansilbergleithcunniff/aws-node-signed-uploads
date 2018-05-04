@@ -16,8 +16,8 @@ custom:
 provider:
   name: aws
   runtime: nodejs8.10
-  stage: ${self:custom.config-file:stage, 'dev'}
-  region: ${opt:region, self:custom.config-file:region, 'us-east-1'}
+  stage: ${self:custom.config-file.stage, 'dev'}
+  region: ${opt:region, self:custom.config-file.region, 'us-east-1'}
   environment:
     REGION: ${self:provider.region}
     SOMEVAL: ${self:custom.config-file.someval}
